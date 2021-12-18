@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Rock,Paper,Scissors</title>
+        <style>
+            *{
+                text-align: center;
+                background-color:black;
+            }
+            h3{
+                color:white;
+            }
+            h1{
+                color:red;
+            }
+            a{
+                color:rgb(235, 106, 46);
+                text-decoration: dashed;
+            }
+            button{
+                border:1px solid rgb(230, 224, 224);
+                border-radius:20px;
+                text-align:center;
+                height:50px;
+                width: 300px;
+                color:rgb(94, 88, 88);
+            }
+            button:hover{
+                border:1px solid rgb(253, 3, 3);
+                border-radius:100px;
+                text-align:center;
+                height:50px;
+                width: 300px;
+                color:rgb(255, 255, 255);
+            }
+            m{
+                color:red;
+                font-size:xx-large;
+            }
+        </style>
+        <link rel="icon" href="./download.jpg" type="image/icon type">
+    </head>
+    <body>
+        <br>
+        <h1>Rock,Paper,Scissors</h1>
+        <br>
+        <h3>GAME </h3>
+        <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">Click to know how to play game.</a>
+        <br>
+        <h2>select input</h2>
+        <br>
+        <button onclick="fun1()">Rock</button>
+        <br>
+        <br>
+        <button onclick="fun2()">Paper</button>
+        <br>
+        <br>
+        <button onclick="fun3()">Scissors</button>
+        <br>
+        <br>
+        
+        <br>
+        <img src="./blank.png" id="img">
+        <br>
+        <br>
+        <m id="result"></m>
+    </body>
+    <script>
+        function fun1(){
+            a=Math.floor(Math.random() * 3);
+            if(a==0){
+                s="./rock.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE ROCK : Tie";
+            }
+            if(a==1){
+                s="./paper.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE PAPER : you lost relode and try again";
+            }
+            if(a==2){
+                s="./scissor.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE SCISSOR : you won";
+            }
+            document.getElementById("img").src=s;
+        }
+        function fun2(){
+            a=Math.floor(Math.random() * 3);
+            if(a==0){
+                s="./rock.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE ROCK : You won";
+            }
+            if(a==1){
+                s="./paper.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE PAPER : its a tie.try again";
+            }
+            if(a==2){
+                s="./scissor.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE SCISSOR : you lost";
+            }
+            document.getElementById("img").src=s;
+        }
+        function fun3(){
+            a=Math.floor(Math.random() * 3);
+            if(a==0){
+                s="./rock.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE ROCK  : you lost";
+            }
+            if(a==1){
+                s="./paper.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE PAPER : you won";
+            }
+            if(a==2){
+                s="./scissor.jpg";
+                document.getElementById("result").innerHTML="I CHOOSE SCISSORS  : its a tie try once again";
+            }
+            document.getElementById("img").src=s;
+        }
+    </script>
+</html>
